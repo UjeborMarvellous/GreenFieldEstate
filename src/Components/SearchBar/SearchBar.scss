@@ -1,0 +1,118 @@
+@import "../../Responsive.scss";
+
+.searchBar {
+    .type {
+        @include sm{
+            // margin-bottom: 5px;
+        }
+        button {
+            padding: 16px 36px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            background-color: #fff;
+            text-transform: capitalize;
+            transition: all 1s ease;
+            border-bottom:  none;
+
+            &.active {
+                background-color: black;
+                color: #fff;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-right: none;
+
+                @include sm {
+                    border: 1px solid gray;
+                }
+            }
+
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-left: none;
+
+                @include sm {
+                    border: 1px solid rgba(128, 128, 128, 0.705);
+                }
+            }
+        }
+    }
+
+    form {
+        border: 1px solid #999;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        gap: 5px;
+
+        @include sm{
+            flex-direction: column;
+            border: none;
+        }
+
+        input {
+            border: none;
+            padding:  0px 10px;
+            width: 200px;
+            outline: none;
+
+            @include sm{
+                margin-bottom: 1px;
+                margin-top: -4px;
+             }
+            // background: transparent;
+            
+            &::placeholder {
+                color: #00000094;
+            }
+            @include sm{
+                width: 100%;
+            }
+
+            @include lg{
+                padding:  0px 5px;
+
+                &:nth-child(2),&:nth-child(3){
+                    width: 140px;
+                }
+            }
+            @include md{
+                padding:  0px 5px;
+
+                &:nth-child(2),&:nth-child(3){
+                    width: auto;
+                }
+            }
+            @include sm{
+                padding: 15px;
+                border: 1px solid rgb(77, 76, 76);
+                // box-shadow: 2px 0px 2px gray;
+
+                &:nth-child(2),&:nth-child(3){
+                    width: auto;
+                }
+            }
+        }
+
+        button{
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            align-self: center;
+            background: #06300dd8;
+            color: #fff;
+            height: 64px;
+            padding: 20px;
+
+            @include sm{
+                padding: 10px 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+}

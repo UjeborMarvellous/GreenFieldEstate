@@ -1,0 +1,28 @@
+@import "../../Responsive.scss";
+
+.LayoutApp {
+    height: 100vh;
+    max-width: 1366px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction:  column;
+
+    @include lg{
+        // background-color: rgb(192, 164, 153);
+        max-width: 1280px;
+    }
+    @include md{
+        // background-color: rgb(158, 178, 216);
+        max-width: 768px;
+    }
+    @include sm{
+        // background-color: rgb(223, 114, 114);
+        max-width: 640px;
+    }
+
+    .Content {
+        flex: 1;
+        // background-color: aqua;
+    }
+}
