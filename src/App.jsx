@@ -3,6 +3,8 @@ import HomePage from "./routes/Homepage/HomePage"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Listpage from "./routes/listPage/Listpage"
 import Layout from "./routes/LayOut/Layout"
+import Login from "./routes/loginPage/Login"
+import Singlepage from "./routes/singlePage/Singlepage"
 
 
 function App() {
@@ -18,6 +20,14 @@ function App() {
         {
           path:"/list",
           element:<Listpage/>
+        },
+        {
+          path:"/login",
+          element:<Login />
+        },
+        {
+          path:"/:id",
+          element:<Singlepage />
         }
       ]
     }

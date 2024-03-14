@@ -1,0 +1,24 @@
+.popupContainer {
+  display: flex;
+  gap: 10px;
+  width: 40rem;
+
+  img {
+    width: 44px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title{
+        font-size: 13px;
+        line-height: 20px;
+        word-wrap: break-word;
+    }
+  }
+}
