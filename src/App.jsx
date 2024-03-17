@@ -5,6 +5,7 @@ import Listpage from "./routes/listPage/Listpage"
 import Layout from "./routes/LayOut/Layout"
 import Login from "./routes/loginPage/Login"
 import Singlepage from "./routes/singlePage/Singlepage"
+import ProfilePage from "./routes/profilePage/ProfilePage"
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
         {
           path:"/:id",
           element:<Singlepage />
+        },
+        {
+          path:"/profile",
+          element:<ProfilePage />
         }
       ]
     }
